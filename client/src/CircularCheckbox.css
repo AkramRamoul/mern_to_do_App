@@ -1,0 +1,26 @@
+.circular-checkbox {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.circular-checkbox input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333; /* Color for the outer circle */
+  border-radius: 50%; /* Make the circle */
+  transition: background-color 0.2s ease;
+}
+
+.circular-checkbox input:checked ~ .checkmark {
+  background-color: #333; /* Color for the inner circle when checked */
+}
